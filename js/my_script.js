@@ -8,26 +8,44 @@
 // // light red: #ee7d57
 // //  red: #E84610
 
-$(document).ready(function() {
+// Code below is the challenge solution
 
-    // var firstRow = $("tr").first();
+//will wait uuntil page ready
+ $(document).ready(function(){
 
-    // $(firstRow).on("click", function() {
+    /*when table header is clicked , removes selection class from all other table rows and
+      adds the selection class to this table headers row only*/
+     $("th").click(function(){
+     	$("tr").children().removeClass("selection")
+    	$(this).siblings().addClass("selection");
 
-    //     var highlightCells = $("tr:first").children();
+  });
+ });
 
-    //     $(highlightCells).addClass("selection");
-    // });
 
-    $("th").on("click", function() {
-        if ($(this).parent().css("background-color") == "#c65353") {
-            $(this).parent().removeClass("selection");
-        } else {
-            $(this).parent().addClass("selection");
-        }
-    });
 
-});
+// Code Below was the Draft of my Attempt to Solve the Challenge
+
+// $(document).ready(function() {
+
+//     // var firstRow = $("tr").first();
+
+//     // $(firstRow).on("click", function() {
+
+//     //     var highlightCells = $("tr:first").children();
+
+//     //     $(highlightCells).addClass("selection");
+//     // });
+
+//     $("th").on("click", function() {
+//         if ($(this).parent().css("background-color") == "#c65353") {
+//             $(this).parent().removeClass("selection");
+//         } else {
+//             $(this).parent().addClass("selection");
+//         }
+//     });
+
+// });
 
 
 // var colHead = ("table").find("th");
